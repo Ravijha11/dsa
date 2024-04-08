@@ -1,15 +1,17 @@
-function ravi(nakul,n){
-  nakul.sort((a,b) => a-b);
-  second =nakul[n-1]
-  for(let i =n-1;i>0;i--){
-    if(nakul[i]!= second){
-      second = nakul[i];
-      break;
-
+function secondlargest(arr, k){
+  let largest = arr[0]
+  for(let i=1; i<k;i++){
+    if(arr[i]> largest){
+      largest= arr[i]
     }
-    
   }
-  return second;
-  
+  largest
+  let secondlargestt = arr[0];
+  for(let i = 1; i<k;i++){
+    if(arr[i]>secondlargestt && arr[i]< largest){
+      secondlargestt= arr[i]
+    }
+  }
+   console.log(secondlargestt)
 }
-console.log(ravi([1,54,55,99,99,65,65,85,888,888,999,999,999],13))
+secondlargest([1,9,15,45,8,65,77,66,90,1000,100000,1000,98556],13)
