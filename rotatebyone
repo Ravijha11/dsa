@@ -1,10 +1,27 @@
-let rotate =((arr,n)=> {
-  temp = arr[0]
-  for(let i=1;i<n;i++){
-    arr[i-1]= arr[i]
+// let rotate =((arr,n)=> {
+//   temp = arr[0]
+//   for(let i=1;i<n;i++){
+//     arr[i-1]= arr[i]
+//   }
+//   arr[n-1] = temp;
+//   return arr;
+
+// })
+// console.log(rotate([1,2,3,4,5],5))
+
+
+// <------------------------left by 1----------------->
+
+let rotate = (arr,n) =>{
+  let last = arr[0]
+  for(let i=1; i<n;i++) {
+    arr[i-1] = arr[i];
+
+
+
   }
-  arr[n-1] = temp;
+  arr[n-1] = last;
   return arr;
 
-})
-console.log(rotate([1,2,3,4,5],5))
+}
+console.log(rotate([15,545,5441,4445,8785,5546,556,555],8))
